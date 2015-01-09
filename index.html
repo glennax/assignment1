@@ -2,9 +2,76 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Glenna Xie's Website</title>
 </head>
 <body>
-	<span>hello there!</span>
+	<!-- navigation menu -->
+	<header>
+		<h1>Glenna Xie</h1>
+		<nav>
+			<ul>
+				<li>home</li>
+				<li>resume</li>
+				<li>blog</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- introduction -->
+	<section class="introduction">
+		<p>
+		Hi, I am Glenna Xie and first of all, thank you for visiting my website!
+		</p>
+		<p>
+		I am currently a graduate student at the Department of Emergent Digital Practices of University of Denver, Colorado. Our department is relatively small but provides lots of resources and opportunities for us students to bring art, media, design, technology, sciences, and humanities altogether to explore what a creative and technological future means to the society. I am also pursuing a graduate certificate in Web Design and Management with another department at DU.
+		</p>
+		<p>
+		I am a creative coder with a strong passion in the intersection of creativity and computer programming. I have coded for functionality as well as artistic expression. I work extensively with Processing and Arduino. I love web technologies like HTML, CSS, JavaScript, Python, CMS, PHP, etc.. I also blog about technologies, web standard languages, creative inspirations, and random things. Last but not least, get connected please! I would love to talk to you and get to know what kind of awesome work that you are doing. The world is always changing and the only way to keep up is to talk to people.
+		</p>
+		<p>
+		I love fashion, photography, pop music and digital art. I am always searching for things that not only have an elegant look, but also inspire new ideas.
+		</p>	
+	</article>
+	<!-- form -->
+	<section class="form">
+		<form action="/analysis.php" method="POST" novalidate>
+			<label>What's the best email address to reach you?</label>
+			<input type="email" name="email" placeholder="Your email"/>
+
+			<label>Would you like to subscribe?</label>
+			<input type="checkbox" checked />
+
+			<label>What career field are you in?</label>
+			<select>
+					<option>Advertising, Marketing and PR</option>
+					<option>Business</option>
+	                <option>Banking and Finance</option>
+	                <option>Creative Art and Design</option>
+	                <option>Eduction</option>
+	                <option>Engineering</option>
+	                <option>Healthcare</option>
+	                <option>Information Technology</option>
+	                <option>Law</option>
+	                <option>Journalism and Media</option>
+	                <option>Social Work</option>
+	                <option>Others</option>
+	        </select>
+
+	        <label>Any other thoughts or comments?</label>
+	        <textarea></textarea>
+
+	        <input type="submit" value="submit" />
+    	</form>
+	</section>
+	<!-- footer with copyright information and social media links -->
+	<footer>
+		<small>&copy;2015 Glenna Xie. All Rights Reserved. </small>
+		<ul>	
+			<li><a href="https://www.linkedin.com/in/glennaxie"><img src="images/linkedin.jpg" alt="linkedIn" /></a></li>
+			<li><a href="https://twitter.com/jinggexie"><img src="images/twitter.jpg" alt="twitter" /></a></li>
+			<li><a href="http://instagram.com/glennagege/"><img src="images/instagram.jpg" alt="instagram" /></a></li>
+		</ul>
+	</footer>
+
 </body>
 </html>
