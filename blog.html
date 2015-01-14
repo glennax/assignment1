@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Glenna Xie's Blog</title>
 </head>
 <body>
@@ -10,26 +10,134 @@
 		<h1>Glenna Xie</h1>
 		<nav>
 			<ul>
-				<li>home</li>
-				<li>resume</li>
-				<li>blog</li>
+				<li><a href="index.html">home</a></li>
+				<li><a href="resume.html">resume</a></li>
+				<li><a href="blog.html">blog</a></li>
 			</ul>
 		</nav>
 	</header>
 	
 	<article>
+		<h2>Bootstrap 3 Learning Notes: Tabs and Panels</h2>
+		<ul>
+			<li><p>Turn a list into a tab navigation:</p>
+				<code> 
+				 	&lt;!-- list navigation for tabs -->
+					&lt;ul class="nav nav-tabs">
+					    &lt;li>&lt;a href="#vacc" data-toggle="tab">&lt;span class="glyphicon glyphicon-pushpin">&lt;/span> Vaccinations&lt;/a>&lt;/li>
+					    &lt;li>&lt;a href="#checkups" data-toggle="tab">&lt;span class="glyphicon glyphicon-ok">&lt;/span> Checkups&lt;/a>&lt;/li>
+					    &lt;li>&lt;a href="#senior" data-toggle="tab">&lt;span class="glyphicon glyphicon-heart">&lt;/span> Senior Pets&lt;/a>&lt;/li>
+					    &lt;li>&lt;a href="#diet" data-toggle="tab">&lt;span class="glyphicon glyphicon-cutlery">&lt;/span> Diet Plans&lt;/a>&lt;/li>
+					&lt;/ul>
+				</code>
 
+				<p>Then, to associate the tab content the corresponding tab, use the class <strong>tab-pane</strong> and ids: </p>
 
+				<code>
+					&lt;div class="tab-content">
+		                &lt;div class="tab-pane fade" id="vacc">
+		                   &lt;p>Dogs and cats are susceptible to a variety of illnesses that can be completely codevented by following the appropriate vaccination schedule.&lt;/p>
+		                   &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+		                &lt;/div>
+		                &lt;div class="tab-pane fade" id="checkups">
+		                   &lt;p>Regular checkups are a key factor in pet wellness, and can often unearth problems that could lead to health issues down the road.  &lt;/p>
+		                   &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+		                &lt;/div>
+		                &lt;div class="tab-pane fade" id="senior">
+		                   &lt;p>Senior pets generally require more medical attention than their younger counterparts, just as senior humans do. So when is a pet considered “senior”? &lt;/p>
+		                   &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+		                &lt;/div>
+		                &lt;div class="tab-pane fade" id="diet">
+		                   &lt;p>Wisdom veterinarians have all had extensive training in pet nutrition and are your best resources when considering changing your pet’s diet. &lt;/p>
+		                   &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+					    &lt;/div>
+					&lt;/div>
+				</code>
+
+				<p>Lastly, to make the first tab appear to be the default starting page, use a little bit Javascript: </p>
+
+				<code>
+					&lt;script type="text/javascript">
+					    $(function () {
+					        $('.nav-tabs a:first').tab('show');
+					    });
+					&lt;/script>
+				</code>
+			</li>
+
+			<li>
+			<p>Accordion panel: 
+			First, wrap the entire content area with a <strong>panel-group</strong> class and parent id of any name. Then, wrap the panel headings and content with the correct markups:</p>
+				<code>
+					&lt;div class="panel-group" id="accordion">
+
+					  &lt;div class="panel panel-default">
+					    &lt;div class="panel-heading">
+					      &lt;h4 class="panel-title">&lt;a href="#vacc" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">&lt;span class="glyphicon glyphicon-pushpin">&lt;/span> Vaccinations&lt;/a>&lt;/h4>
+					    &lt;/div>
+					    &lt;div id="vacc" class="panel-collapse collapse in">
+					      &lt;div class="panel-body">
+					    		&lt;p>Dogs and cats are susceptible to a variety of illnesses that can be completely codevented by following the appropriate vaccination schedule.&lt;/p>
+					            &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+					      &lt;/div>
+					    &lt;/div>
+					  &lt;/div>
+
+					  &lt;div class="panel panel-default">
+					    &lt;div class="panel-heading">
+					       &lt;h4 class="panel-title">&lt;a href="#checkups" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">&lt;span class="glyphicon glyphicon-ok">&lt;/span> Checkups&lt;/a>&lt;/h4>
+					    &lt;/div>
+					    &lt;div id="checkups" class="panel-collapse collapse">
+					      &lt;div class="panel-body">
+					       &lt;p>Regular checkups are a key factor in pet wellness, and can often unearth problems that could lead to health issues down the road.&lt;/p>
+					       &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+					      &lt;/div>
+					    &lt;/div>
+					  &lt;/div> 
+
+					  &lt;div class="panel panel-default">
+					    &lt;div class="panel-heading">
+					       &lt;h4 class="panel-title">&lt;a href="#senior" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">&lt;span class="glyphicon glyphicon-heart">&lt;/span> Senior Pets&lt;/a>&lt;/h4>
+					    &lt;/div>
+					    &lt;div id="senior" class="panel-collapse collapse">
+					      &lt;div class="panel-body">
+					       &lt;p>Senior pets generally require more medical attention than their younger counterparts, just as senior humans do. So when is a pet considered “senior”? &lt;/p>
+					       &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+					      &lt;/div>
+					    &lt;/div>
+					  &lt;/div>
+					  
+					  &lt;div class="panel panel-default">
+					    &lt;div class="panel-heading">
+					       &lt;h4 class="panel-title">&lt;a href="#senior" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">&lt;span class="glyphicon glyphicon-cutlery">&lt;/span> Diet Plans&lt;/a>&lt;/h4>
+					    &lt;/div>
+					    &lt;div id="senior" class="panel-collapse collapse">
+					      &lt;div class="panel-body">
+					       &lt;p>Wisdom veterinarians have all had extensive training in pet nutrition and are your best resources when considering changing your pet’s diet.&lt;/p>
+					       &lt;p>&lt;a href="#" class="btn btn-info">Read more >>&lt;/a>&lt;/p>
+					      &lt;/div>
+					    &lt;/div>
+					  &lt;/div>
+
+					&lt;/div>&lt;!-- end accordion --> 
+				</code>
+		    </li>
+		</ul>
 	</article>
 	<!-- footer with copyright information and social media links -->
 	<footer>
 		<small>&copy;2015 Glenna Xie. All Rights Reserved. </small>
 		<ul>	
-			<li><a href="https://www.linkedin.com/in/glennaxie"><img src="images/linkedin.jpg" alt="linkedIn" /></a></li>
-			<li><a href="https://twitter.com/jinggexie"><img src="images/twitter.jpg" alt="twitter" /></a></li>
-			<li><a href="http://instagram.com/glennagege/"><img src="images/instagram.jpg" alt="instagram" /></a></li>
+			<li><a href="https://www.linkedin.com/in/glennaxie" target="_blank"><img src="images/linkedin.png" alt="linkedIn" /></a></li>
+			<li><a href="https://twitter.com/jinggexie" target="_blank"><img src="images/twitter.png" alt="twitter" /></a></li>
+			<li><a href="http://instagram.com/glennagege/" target="_blank"><img src="images/ins.png" alt="instagram" /></a></li>
 		</ul>
 	</footer>
+	<!-- javascript -->
+	<noscript>
+    	this webpage does not have javascript enabled.
+    </noscript>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
