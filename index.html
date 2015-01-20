@@ -32,7 +32,7 @@
 		<p>
 		I love fashion, photography, pop music and digital art. I am always searching for things that not only have an elegant look, but also inspire new ideas.
 		</p>	
-	</article>
+	</section>
 	<!-- form -->
 	<section class="form">
 		<form action="/analysis.php" method="POST" novalidate>
@@ -40,26 +40,26 @@
 			<input type="email" name="email" placeholder="Your email"/>
 
 			<label>Would you like to subscribe?</label>
-			<input type="checkbox" checked />
+			<input type="checkbox" name="subscribe" checked />
 
 			<label>What career field are you in?</label>
-			<select>
-					<option>Advertising, Marketing and PR</option>
-					<option>Business</option>
-	                <option>Banking and Finance</option>
-	                <option>Creative Art and Design</option>
-	                <option>Eduction</option>
-	                <option>Engineering</option>
-	                <option>Healthcare</option>
-	                <option>Information Technology</option>
-	                <option>Law</option>
-	                <option>Journalism and Media</option>
-	                <option>Social Work</option>
-	                <option>Others</option>
-	        </select>
+			<select name="profession">
+			<option>Advertising, Marketing and PR</option>
+				<option>Business</option>
+		                <option>Banking and Finance</option>
+		                <option>Creative Art and Design</option>
+		                <option>Eduction</option>
+		                <option>Engineering</option>
+		                <option>Healthcare</option>
+		                <option>Information Technology</option>
+		                <option>Law</option>
+		                <option>Journalism and Media</option>
+		                <option>Social Work</option>
+		                <option>Others</option>
+		        </select>
 
 	        <label>Any other thoughts or comments?</label>
-	        <textarea></textarea>
+	        <textarea name="thoughts"></textarea>
 
 	        <input type="submit" value="submit" />
     	</form>
