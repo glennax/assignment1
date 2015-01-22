@@ -9,12 +9,16 @@
 <body>
 	<!-- navigation menu -->
 	<header class="flex-container">
-		<h1 class="flex-item">Glenna Xie</h1>
+		<h1 class="flex-item"><a href="index.html">Glenna Xie</a></h1>
 		<nav class="flex-item">
 			<ul class="menu">
-				<li><a href="index.html">home</a></li>
-				<li><a href="resume.html">resume</a></li>
-				<li><a href="blog.html">blog</a></li>
+				<li><a href="index.html">
+				<span class="hoverEffect">&lt;&nbsp;</span>home<span class="hoverEffect">&nbsp;&gt;</span></a></li>
+
+				<li><a href="resume.html">
+				<span class="hoverEffect">&lt;&nbsp;</span>resume<span class="hoverEffect">&nbsp;&gt;</span></a></li>
+
+				<li><a href="blog.html"><span class="hoverEffect">&lt;&nbsp;</span>blog<span class="hoverEffect">&nbsp;&gt;</span></a></li>
 			</ul>
 		</nav>
 	</header>
@@ -36,38 +40,47 @@
 	<!-- form -->
 	<section class="form">
 		<form action="/analysis.php" method="POST" novalidate>
-			<label>What's the best email address to reach you?</label>
-			<input type="email" name="email" placeholder="Your email"/>
+			<ul>
+				<li>
+					<label>What's the best email address to reach you?</label>
+					<input type="email" name="email" placeholder="Your email"/>
+				</li>
 
-			<label>Would you like to subscribe?</label>
-			<input type="checkbox" name="subscribe" checked />
+				<li>
+					<label>Would you like to subscribe?</label>
+					<input type="checkbox" name="subscribe" checked />
+			    </li>
 
-			<label>What career field are you in?</label>
-			<select name="profession">
-			<option>Advertising, Marketing and PR</option>
-				<option>Business</option>
-		                <option>Banking and Finance</option>
-		                <option>Creative Art and Design</option>
-		                <option>Eduction</option>
-		                <option>Engineering</option>
-		                <option>Healthcare</option>
-		                <option>Information Technology</option>
-		                <option>Law</option>
-		                <option>Journalism and Media</option>
-		                <option>Social Work</option>
-		                <option>Others</option>
-		        </select>
+			    <li>
+					<label>What career field are you in?</label>
+					<select name="profession">
+					<option>Advertising, Marketing and PR</option>
+						<option>Business</option>
+				                <option>Banking and Finance</option>
+				                <option>Creative Art and Design</option>
+				                <option>Eduction</option>
+				                <option>Engineering</option>
+				                <option>Healthcare</option>
+				                <option>Information Technology</option>
+				                <option>Law</option>
+				                <option>Journalism and Media</option>
+				                <option>Social Work</option>
+				                <option>Others</option>
+				    </select>
+			    </li>
 
-	        <label>Any other thoughts or comments?</label>
-	        <textarea name="thoughts"></textarea>
-
-	        <input type="submit" value="submit" />
+			    <li>
+			        <label>Any other thoughts or comments?</label>
+			        <textarea name="thoughts"></textarea>
+			        <input type="submit" value="submit" />
+		    	</li>
+	    	</ul>
     	</form>
 	</section>
 	<!-- footer with copyright information and social media links -->
 	<footer>
 		<small>&copy;2015 Glenna Xie. All Rights Reserved. </small>
-		<ul>	
+		<ul class="social">	
 			<li><a href="https://www.linkedin.com/in/glennaxie" target="_blank"><img src="images/linkedin.png" alt="linkedIn" /></a></li>
 			<li><a href="https://twitter.com/jinggexie" target="_blank"><img src="images/twitter.png" alt="twitter" /></a></li>
 			<li><a href="http://instagram.com/glennagege/" target="_blank"><img src="images/ins.png" alt="instagram" /></a></li>
