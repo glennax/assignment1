@@ -71,7 +71,7 @@ nav{
 
 .menu li{
 	display: inline-block;
-	margin: 0 .5em;
+	margin: 0 .8em;
 }
 
 section{
@@ -107,6 +107,7 @@ section{
 }
 .resume ul{
 	list-style: none;
+	visibility: visible;
 }
 
 .resume p{
@@ -115,6 +116,8 @@ section{
 
 h2{
 	color:rgb(25, 110, 61);
+	margin-left: 20px;
+	display: inline-block;
 }
 
 h3{
@@ -166,6 +169,10 @@ footer{
 
 .social li{
 	display: inline;
+	margin: 0 .5em;
 }
 
-
+.hidden{
+	display: none;
+	background-color: white;
+}
