@@ -26,6 +26,7 @@ header{
 a:link{
 	color:rgb(25, 110, 61);
 	text-decoration: none;
+	width: 5em;
 }
 
 a:visited{
@@ -37,10 +38,26 @@ a:hover {
 	color:rgb(6, 148, 223);
 }
 
-a:hover .hoverEffect{
+li:hover a:before {
+	visibility: visible;
+}
+
+li:hover a:after {
+	visibility: visible;
+}
+
+.menu li a:before {
+	content: "< ";
 	color:rgb(6, 148, 223); /*blue*/
 	text-decoration: none;
-	visibility: visible;
+	visibility: hidden;
+}
+
+.menu li a:after {
+	content: " >";
+	color:rgb(6, 148, 223); /*blue*/
+	text-decoration: none;
+	visibility: hidden;
 }
 
 a:active{
@@ -71,7 +88,7 @@ nav{
 
 .menu li{
 	display: inline-block;
-	margin: 0 .8em;
+	margin: 0 .5em;
 }
 
 section{
@@ -173,6 +190,16 @@ footer{
 }
 
 .hidden{
-	display: none;
-	background-color: white;
+ display: none;
+
+}
+
+.visuallyHidden{
+	 opacity: 0;
+	 margin-top: -450px;
+	 transition: opacity 500ms, margin 1s;
+}
+
+.LED{
+	cursor: pointer;
 }
