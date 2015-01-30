@@ -19,9 +19,6 @@ header{
 	justify-content: space-between;
 }
 
-.hoverEffect{
-	visibility: hidden;
-}
 
 a:link{
 	color:rgb(25, 110, 61);
@@ -38,11 +35,11 @@ a:hover {
 	color:rgb(6, 148, 223);
 }
 
-li:hover a:before {
+.menu li:hover a:before {
 	visibility: visible;
 }
 
-li:hover a:after {
+.menu li:hover a:after {
 	visibility: visible;
 }
 
